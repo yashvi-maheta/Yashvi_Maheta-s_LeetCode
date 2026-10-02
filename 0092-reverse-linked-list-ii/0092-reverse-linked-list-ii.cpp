@@ -53,6 +53,8 @@ public:
         head2->next=first;
         ListNode* newHead=dummy->next;
 
+        delete dummy;
+
         return newHead;
     }
 };
