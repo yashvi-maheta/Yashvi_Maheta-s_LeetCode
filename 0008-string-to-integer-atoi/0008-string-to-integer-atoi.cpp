@@ -28,7 +28,7 @@ public:
 
             if(sign == 1 && num>INT_MAX)
                 return INT_MAX;
-            else if(sign == -1 && num>2147483648LL)
+            else if(sign == -1 && num>2147483648LL) // negative number exceeds the minimum int limit, return INT_MIN
                 return INT_MIN; 
 
             i++;   
