@@ -7,6 +7,7 @@ public:
         {
             arr.push_back({nums[i],i});
         }
+
         sort(arr.begin(),arr.end());
         for(int i=0,j=nums.size()-1;i<nums.size()&&j>=0;)
         {
