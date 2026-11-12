@@ -23,9 +23,7 @@ public:
         vector<int> res;
         if(root == NULL)
             return res;
-        solve(root->left,res);
-        res.push_back(root->val);
-        solve(root->right,res);
+        solve(root,res);
         return res;
 
     }
