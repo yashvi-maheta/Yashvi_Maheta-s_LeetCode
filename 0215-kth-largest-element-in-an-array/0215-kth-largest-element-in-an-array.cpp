@@ -7,12 +7,8 @@ public:
         {
             pq.push(nums[i]);
         }
-        int i=0;
-        while(i<k-1)
-        {
+        for(int i=0;i<k-1;i++)
             pq.pop();
-            i++;
-        }
         return pq.top();
     }
 };
