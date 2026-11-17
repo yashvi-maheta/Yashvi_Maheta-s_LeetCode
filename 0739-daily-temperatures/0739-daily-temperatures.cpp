@@ -7,8 +7,10 @@ public:
         {
             while(!st.empty() && temperatures[st.top()]<temperatures[i])
             {
-                res[st.top()]=i-st.top();
-                st.pop();
+                res[st.top()]=i-st.top();  // to store diff between indices to get the days to wait for warmer temp 
+                                          //(i.e. current temp at which index and the day with whom we are checking)
+                st.pop(); 
+                
             }
             st.push(i);
         }
