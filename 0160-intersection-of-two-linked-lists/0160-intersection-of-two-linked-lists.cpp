@@ -11,19 +11,22 @@ public:
     ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
         ListNode* tmpA=headA;
         ListNode* tmpB=headB;
-        while(tmpA != NULL)
+        while(tmpA != tmpB)
         {
-            tmpB=headB;
-            while(tmpB!=NULL)
-            {
-                if(tmpA == tmpB)
-                {
-                    return tmpA;
-                }
+            if(tmpA==NULL)
+                tmpA=headB;
+            else
+                tmpA=tmpA->next;
+            
+            if(tmpB==NULL)
+                tmpB=headA;
+            else
                 tmpB=tmpB->next;
-            }
-            tmpA=tmpA->next;
         }
-        return NULL;
+        return tmpA;
     }
 };
+
+// previous approach with n^2 complexity 
+//while keeping one element fixed in one list  
+//and taversing the whole second list comparing with first one
