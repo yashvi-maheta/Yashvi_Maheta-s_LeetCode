@@ -31,7 +31,7 @@ public:
         }
         reverse(res.begin(),res.end());
         int j=0;
-        while(j+1<res.size() && res[j]=='0')
+        while(j+1<res.size() && res[j]=='0') // this will skip the last element so if all are 0s that is handled correctly 
             j++;
 
         res=res.substr(j);
